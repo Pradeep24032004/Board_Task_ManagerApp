@@ -20,7 +20,7 @@ const SignIn = () => {
     e.preventDefault();
     const loginUser = { email, password };
     try {
-      const res = await axios.post('https://task-manager-backend-12.onrender.com/login', loginUser);
+      const res = await axios.post('http://localhost:5000/login', loginUser);
       console.log(res.data);
       localStorage.setItem('email', formData.email);
       navigate("/home");
