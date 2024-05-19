@@ -3,6 +3,8 @@
 Deployed Project Link: 
 https://6648fa6756a6510b9908f645--admirable-starburst-5e148a.netlify.app/
 
+-->It is Full Stack project works on MERN stack frame work, used to manage tasks by adding, editing and deleting tasks to the boards.
+
 -->It is responsive website it will fit to both desktop and mobile
 
 Steps to run Project:
