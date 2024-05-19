@@ -14,7 +14,7 @@ const Profile = () => {
 
   const fetchUserDetails = async (email) => {
     try {
-      const response = await axios.get(`https://task-manager-backend-12.onrender.com/users/${email}`);
+      const response = await axios.get(`http://localhost:5000/users/${email}`);
       setUser(response.data);
     } catch (error) {
       console.error('Error fetching user details:', error.message);
