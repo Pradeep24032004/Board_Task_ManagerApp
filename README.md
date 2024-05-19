@@ -7,7 +7,8 @@ Steps to run Project:
 
 step 1: clone the project by using git clone command
 
-step 2: Go to server directory enter the commands (i). npm install 
+step 2: Go to server directory enter the commands 
+                                                  (i). npm install 
 
                                                   (ii). npm install express mongoose cors 
                                                   
@@ -16,8 +17,11 @@ step 2: Go to server directory enter the commands (i). npm install
 step 3: Then run 'node server.js' command to set up server
 
 step 4: split the terminal and enter go to client directory enter the following commands for installing dependencies
+
                            (i). npm install
+                           
                            (ii). npm install react 
+                           
                            (iii). npm install axios react-router-dom
 
 step 5: Then run 'npm start' to run the front end
