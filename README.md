@@ -8,7 +8,9 @@ Steps to run Project:
 step 1: clone the project by using git clone command
 
 step 2: Go to server directory enter the commands (i). npm install 
+
                                                   (ii). npm install express mongoose cors 
+                                                  
                                                   (iii). npm install dotenv jsonwebtoken bcryptjs
                                                   
 step 3: Then run 'node server.js' command to set up server
