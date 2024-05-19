@@ -16,12 +16,12 @@ const Task = ({ boardId }) => {
     }, []);
 
     const fetchTasks = async () => {
-        const response = await axios.get(`https://task-manager-backend-11.onrender.com/boards/${boardId}/tasks`);
+        const response = await axios.get(`http://localhost:5000/boards/${boardId}/tasks`);
         setTasks(response.data);
     };
 
     const addTask = async () => {
-        const response = await axios.post(`https://task-manager-backend-11.onrender.com/boards/${boardId}/tasks`, {
+        const response = await axios.post(`http://localhost:5000/boards/${boardId}/tasks`, {
             title: taskTitle,
             description: taskDescription,
         });
@@ -31,7 +31,7 @@ const Task = ({ boardId }) => {
     };
 
     const updateTask = async () => {
-        const response = await axios.put(`https://task-manager-backend-11.onrender.com/tasks/${editingTaskId}`, {
+        const response = await axios.put(`http://localhost:5000/tasks/${editingTaskId}`, {
             title: editingTaskTitle,
             description: editingTaskDescription,
         });
@@ -42,7 +42,7 @@ const Task = ({ boardId }) => {
     };
 
     const deleteTask = async (id) => {
-        await axios.delete(`https://task-manager-backend-12.onrender.com/tasks/${id}`);
+        await axios.delete(`http://localhost:5000/tasks/${id}`);
         fetchTasks();
     };
 
