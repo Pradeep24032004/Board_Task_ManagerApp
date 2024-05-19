@@ -21,7 +21,7 @@ const SignUp = () => {
     e.preventDefault();
     const newUser = { name, email, password };
     try {
-      const res = await axios.post('https://task-manager-backend-12.onrender.com/register', newUser);
+      const res = await axios.post('http://localhost:5000/register', newUser);
       console.log(res.data);
       navigate("/signin");
       // Handle successful response
