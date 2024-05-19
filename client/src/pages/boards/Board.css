@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.board {
+    background-color: white;
+    position: relative;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 320px; 
+    min-height: 300px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+    padding: 15px;
+}
+
+input {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.add {
+    background-color: #007bff;
+    color: white;
+}
+
+button.add:hover {
+    background-color: #0056b3;
+}
+
+button.edit {
+    background-color: #28a745;
+    color: white;
+}
+
+button.edit:hover {
+    background-color: #218838;
+}
+
+button.delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+button.delete:hover {
+    background-color: #c82333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-input {
+    margin-bottom: 0.5rem;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.profile {
+    position: absolute;
+    top: 48px; 
+    right: 20px; 
+    display: flex;
+    align-items: center;
+}
+
+.profile p {
+    margin-right: 10px;
+    padding: 35px;
+}
+
+.profile button {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.profile button:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .board {
+        width: calc(50% - 2rem); 
+    }
+}
+
+@media (max-width: 480px) {
+    .board {
+        width: calc(100% - 2rem); 
+    }
+}
