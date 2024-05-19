@@ -3,6 +3,8 @@
 Deployed Project Link: 
 https://6648fa6756a6510b9908f645--admirable-starburst-5e148a.netlify.app/
 
+It is responsive website it will fit both desktop and mobile
+
 Steps to run Project:
 
 step 1: clone the project by using git clone command
