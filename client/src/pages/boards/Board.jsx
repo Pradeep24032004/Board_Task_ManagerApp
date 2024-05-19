@@ -18,25 +18,25 @@ const Board = () => {
     }, []);
 
     const fetchBoards = async () => {
-        const response = await axios.get('https://task-manager-backend-12.onrender.com/boards');
+        const response = await axios.get('http://localhost:5000/boards');
         setBoards(response.data);
     };
 
     const addBoard = async () => {
-        const response = await axios.post('https://task-manager-backend-12.onrender.com/boards', { name: boardName });
+        const response = await axios.post('http://localhost:5000/boards', { name: boardName });
         setBoards([...boards, response.data]);
         setBoardName('');
     };
 
     const updateBoard = async () => {
-        const response = await axios.put(`https://task-manager-backend-12.onrender.com/boards/${editingBoardId}`, { name: editingBoardName });
+        const response = await axios.put(`http://localhost:5000/boards/${editingBoardId}`, { name: editingBoardName });
         setBoards(boards.map(board => (board._id === editingBoardId ? response.data : board)));
         setEditingBoardId(null);
         setEditingBoardName('');
     };
 
     const deleteBoard = async (id) => {
-        await axios.delete(`https://task-manager-backend-12.onrender.com/boards/${id}`);
+        await axios.delete(`http://localhost:5000/boards/${id}`);
         fetchBoards();
     };
 
@@ -44,7 +44,7 @@ const Board = () => {
         const userEmail = localStorage.getItem('email');
         if (userEmail) {
             try {
-                const response = await axios.get(`https://task-manager-backend-12.onrender.com/user?email=${userEmail}`);
+                const response = await axios.get(`http://localhost:5000/user?email=${userEmail}`);
                 setUser(response.data);
             } catch (error) {
                 console.error('Error fetching user details:', error);
